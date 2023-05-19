@@ -1,0 +1,21 @@
+/* color: #48250F; */
+
+.banner {
+    width: 100%;
+    background-color: #e14984;
+    height: 20vh;
+    margin-top: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner__img {
+    height: 175px;
+}
+
+@media (max-width: 650px) {
+    .banner__img {
+        display: none;
+    }
+}

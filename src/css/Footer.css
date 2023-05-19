@@ -1,0 +1,28 @@
+.footer {
+    background-color: #48250F;
+    height: 30vh;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__cell {
+    margin-top: 5vh;
+}
+
+.footer__cell p {
+    color: #e14984;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.footer__cell p:hover {
+    color: pink;
+}
+/* 
+@media (max-width: 650px) {
+    .footer {
+        display: flex;
+        fle
+    }
+} */
