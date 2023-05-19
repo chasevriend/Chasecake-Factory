@@ -5,22 +5,23 @@ import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import ProductPage, { CartContext } from "./pages/ProductPage";
 import ShopPage from "./pages/ShopPage";
-
+import CartProvider from "./context/CartContext";
 
 function App() {
 
   
   return (
-    
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<ShopPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/shop/:id" element={<ProductPage />} />
-      </Routes>
-    </Router>
+    <CartProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/shop/:id" element={<ProductPage />} />
+        </Routes>
+      </Router>
+    </CartProvider>
     
   );
 };

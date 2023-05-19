@@ -18,9 +18,9 @@ import cakeRedVelvet from "../images/cakeRedVelvet.png"
 import cakeConfetti from "../images/cakeConfetti.png"
 
 
-export const items = [
+const items = [
     {
-        id: 1,
+        id: "1",
         category: "Cookie",
         flavor: "Chocolate",
         img: cookieChocolate,
@@ -29,7 +29,7 @@ export const items = [
         description: "Chocolate Chip Cookie - Delicious large cookies freshly baked and ready to enjoy. They average 4 inches across."
     },
     {
-        id: 2,
+        id: "2",
         category: "Cookie",
         flavor: "Lemon",
         img: cookieLemon,
@@ -38,7 +38,7 @@ export const items = [
         description: "Lemon Gem Cookie - Delicious large cookies freshly baked and ready to enjoy. They average 4 inches across."
     },
     {
-        id: 3,
+        id: "3",
         category: "Cookie",
         flavor: "SnickerDoodle",
         img: cookieSnickerdoodle,
@@ -47,7 +47,7 @@ export const items = [
         description: "Snickerdoodle Cookie - Delicious large cookies freshly baked and ready to enjoy. They average 4 inches across."
     },
     {
-        id: 4,
+        id: "4",
         category: "Cookie",
         flavor: "Caramel Pecan",
         img: cookieCaramel,
@@ -56,7 +56,7 @@ export const items = [
         description: "Caramel Pecan Cookie - Delicious large cookies freshly baked and ready to enjoy. They average 4 inches across."
     },
     {
-        id: 5,
+        id: "5",
         category: "Cupcake",
         flavor: "Chocolate",
         img: cupcakeNutella,
@@ -65,7 +65,7 @@ export const items = [
         description: "This delicious cupcake is like a party in your mouth! A fluffy, light chocolate cake is filled with a creamy vanilla mousse and topped with a delightful nutella mousse icing. Enjoy a sweet and enjoyable treat that won't weigh you down!"
     },
     {
-        id: 6,
+        id: "6",
         category: "Cupcake",
         flavor: "Chocolate",
         img: cupcakeSmores,
@@ -74,7 +74,7 @@ export const items = [
         description: "The perfect combination of flavors for an enjoyable snack. Enjoy the perfect balance of chocolate and sweetness without feeling weighed down."
     },
     {
-        id: 7,
+        id: "7",
         category: "Cupcake",
         flavor: "Vanilla",
         img: cupcakeEclair,
@@ -83,7 +83,7 @@ export const items = [
         description: "White cake, vanilla cream filled, and topped with fudge."
     },
     {
-        id: 8,
+        id: "8",
         category: "Cupcake",
         flavor: "Vanilla",
         img: cupcakePina,
@@ -92,7 +92,7 @@ export const items = [
         description: "White cake, pineapple filled, and topped with vanilla mousse and coconut."
     },
     {
-        id: 9,
+        id: "9",
         category: "Cupcake",
         flavor: "Lemon",
         img: cupcakeLemonRazzle,
@@ -101,7 +101,7 @@ export const items = [
         description: "Lemon cake, with vanilla cream filling, and topped with raspberry and vanilla mousse."
     },
     {
-        id: 10,
+        id: "10",
         category: "Cupcake",
         flavor: "Lemon",
         img: cupcakeLemonBliss,
@@ -110,7 +110,7 @@ export const items = [
         description: "Lemon cake with lemon filling and cream cheese mousse icing."
     },
     {
-        id: 11,
+        id: "11",
         category: "Cupcake",
         flavor: "Red Velvet",
         img: cupcakeRedVelvetCreamCheese,
@@ -119,7 +119,7 @@ export const items = [
         description: "Indulge in a delectable cupcake that is sure to tantalize your taste buds! Our Red Velvet Cupcake is filled with a creamy vanilla mousse and topped with a tantalizing Cream Cheese Mousse for a delightful flavor combination. Enjoy a light and sweet treat without the richness!"
     },
     {
-        id: 12,
+        id: "12",
         category: "Cupcake",
         flavor: "Red Velvet",
         img: cupcakeRedVelvetOreo,
@@ -128,7 +128,7 @@ export const items = [
         description: "We use icing that will make your taste buds dance. Enjoy a taste of sweetness without the heavy richness of other desserts."
     },
     {
-        id: 13,
+        id: "13",
         category: "Cupcake",
         flavor: "Strawberry",
         img: cupcakeVeryBerry,
@@ -137,7 +137,7 @@ export const items = [
         description: "Strawberry cake with strawberry filling and topped with strawberry mousse icing."
     },
     {
-        id: 14,
+        id: "14",
         category: "Cupcake",
         flavor: "Strawberry",
         img: cupcakeStrawberryBliss,
@@ -146,7 +146,7 @@ export const items = [
         description: "Strawberry cake with strawberry filling and topped with cream cheese mousse icing."
     },
     {
-        id: 15,
+        id: "15",
         category: "Cake",
         flavor: "Chocolate",
         img: cakeChocolate,
@@ -155,7 +155,7 @@ export const items = [
         description: "Chocolate Cake with Chocolate Chip Mousse Filling."
     },
     {
-        id: 16,
+        id: "16",
         category: "Cake",
         flavor: "Vanilla",
         img: cakeVanilla,
@@ -164,7 +164,7 @@ export const items = [
         description: "White Cake with Vanilla Bavarian Custard and Raspberry Filling."
     },
     {
-        id: 17,
+        id: "17",
         category: "Cake",
         flavor: "Red Velvet",
         img: cakeRedVelvet,
@@ -173,7 +173,7 @@ export const items = [
         description: "Red Velvet Cake with Cream Cheese Mousse Filling."
     },
     {
-        id: 18,
+        id: "18",
         category: "Cake",
         flavor: "Vanilla",
         img: cakeConfetti,
@@ -182,3 +182,15 @@ export const items = [
         description: "Confetti Cake with Vanilla Bavarian Custard Filling."
     },
 ]
+
+const getItemData = (id) => {
+    let productData = items.find(product => product.id === id);
+
+    if (productData == undefined) {
+        console.log("product data does not exist for ID: " + id);
+        return undefined;
+    }
+    return productData;
+}
+
+export { items, getItemData };
