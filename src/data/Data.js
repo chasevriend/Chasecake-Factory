@@ -18,7 +18,7 @@ import cakeRedVelvet from "../images/cakeRedVelvet.png"
 import cakeConfetti from "../images/cakeConfetti.png"
 
 
-const items = [
+const products = [
     {
         id: "1",
         category: "Cookie",
@@ -183,14 +183,15 @@ const items = [
     },
 ]
 
-const getItemData = (id) => {
-    let productData = items.find(product => product.id === id);
+function getProductData(id) {
+    let productData = products.find(product => product.id === id);
 
     if (productData == undefined) {
-        console.log("product data does not exist for ID: " + id);
+        console.log("Product data does not exist for ID:" + id);
         return undefined;
     }
+
     return productData;
 }
 
-export { items, getItemData };
+export { products, getProductData };

@@ -135,4 +135,19 @@
     .hero__img2 {
         display: none;
     }
+    .main__cell {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1130px) {
+    .main__cell {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
 }
