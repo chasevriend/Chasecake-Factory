@@ -6,7 +6,7 @@ import Cookies from '../images/cookies.png';
 
 const Hero = () => {
   return (
-    <>
+    <> 
         <div className='hero'>
             <img src='https://cdn.shopify.com/s/files/1/0549/9456/7357/files/strawberry-shortcake_home-page-template_301cbf78-c8f8-4d07-b9f8-2d073082d69e_360x.png?v=1683561809' className='hero__img1' alt=''></img>
             <img src={Cookies} alt='' className='hero__img2' />
