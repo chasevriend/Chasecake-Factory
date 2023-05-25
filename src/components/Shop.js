@@ -1,6 +1,6 @@
 import React, { useContext, useState, createContext } from 'react'
 import { useParams } from 'react-router';
-import { products, getProductData } from "../data/Data"
+import { items, getItemData } from "../data/Data"
 import { Link } from 'react-router-dom'
 import "../css/Products.css"
 import { CartContext } from '../context/CartContext';

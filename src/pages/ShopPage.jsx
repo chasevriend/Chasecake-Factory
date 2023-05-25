@@ -3,15 +3,12 @@ import Banner from '../components/Banner'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
 import Products from '../components/Products'
-// import Shop from '../components/Shop'
-// import Product from '../components/Product'
 
 const ShopPage = () => {
   return (
     <>
         <Nav />
-        {/* <Shop /> */}
-        <Products />
+        {/* <Products /> */}
         <Banner />
         <Footer />
 
